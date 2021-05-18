@@ -1,0 +1,17 @@
+<div class="box">
+  <div class="login">
+    <h1>Welcome Kenko!</h1>
+    <mat-form-field>
+      <mat-label>Please enter your name</mat-label>
+      <input matInput [(ngModel)]="name" (keyup.enter)="goPage()" />
+    </mat-form-field>
+    <button
+      mat-button
+      color="primary"
+      [disabled]="name.trim() == '' ? true : false"
+      (click)="goPage()"
+    >
+      confirm
+    </button>
+  </div>
+</div>

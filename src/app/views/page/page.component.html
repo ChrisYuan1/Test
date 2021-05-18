@@ -1,0 +1,23 @@
+<div class="dialog-box">
+  <ul class="dialog">
+    <li>
+      <mat-form-field>
+        <mat-label>Enter your ID number</mat-label>
+        <input matInput [(ngModel)]="value" />
+      </mat-form-field>
+    </li>
+    <li>
+      <button
+        mat-raised-button
+        color="primary"
+        [disabled]="value.trim() == '' ? true : false"
+        (click)="openDialog()"
+      >
+        Random Assign
+      </button>
+    </li>
+    <!-- <li *ngIf="person">
+      Congratulation! <i>{{ person }}</i> was chosed as the reviewer
+    </li> -->
+  </ul>
+</div>
